@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<ProjectConfigFile>
+  <Configurations Default="CMSDEV">
+    <Configuration Name="CMSDEV">
+      <Project DESKTOPLINKNAME="Web页面整合测试环境" SHOW_HOME="false" APP="BGCMS0" CFG9672="true" COMPANY="ALL" MULTICOMPANY="true" CULTURE="zh-CHS" MENUMODE="1" ENVIRONMENT="0" AUTHMODE="9672" FORGETPWDURL="http://cmsdev.baogang.info/dev/#/forgotpwd/verifytype" CWEB="http://cmsdev.baogang.info/dev/#/account/signin/" USERCFG_CLOUD_SYNC="true" USERCFG_CLOUD_SYNC_URL="http://190.2.253.23/CloudSync/api/"/>
+      <Partitions DominName="cmscdev.baogang.info" Default="BGNGP">
+        <Partition PartName="BGNGP" Description="宝山" Middleware="TUXEDO" UPDATEURL="http://190.2.253.141/BGCMS0/" WebProxy="http://190.2.253.14/bgngp0/Service/rest/CallCpp" >
+          <Server Address="10.25.33.110" Type="TUXEDO" Port="7800"/>
+        </Partition>
+      </Partitions>
+      <Cultures>
+        <Culture Name="zh-CHS" Location="zh-CN" Description="简体中文" IcuCulture="zh_Hans" ProjectFullName="宝信协同工作站" />
+      </Cultures>
+    </Configuration>
+
+   </Configurations>
+</ProjectConfigFile>

@@ -1,0 +1,25 @@
+$quote "
+$ ident	"@(#) fml/libfml/LIBFML.text	$Revision: 1.3 $"
+$ catalog: LIBFML_CAT
+$set 1
+$ MESSAGES 1 THROUGH 99 ARE INDEXED AS AN ARRAY BY fml/libfml/F_error.c
+1 "ERROR: Fielded buffer not aligned"
+2 "ERROR: Buffer not fielded"
+3 "ERROR: No space in fielded buffer"
+4 "ERROR: Field not present"
+5 "ERROR: Unknown field number or type"
+6 "ERROR: Invalid field type"
+7 "ERROR: UNIX system call error"
+8 "ERROR: Unknown field name"
+9 "ERROR: Memory allocation failed"
+10 "ERROR: Bad syntax in boolean expression"
+11 "ERROR: Cannot find or open field table"
+12 ""
+13 "ERROR: Invalid argument to function"
+14 "ERROR: Destructive concurrent access to field table"
+15 "ERROR: Cannot find or get view"
+16 "ERROR: Syntax error in viewfile"
+17 "ERROR: Cannot find or open viewfile"
+18 "ERROR: ACM contains negative value"
+19 "ERROR: Cname not found"
+$ MESSAGES 1 THROUGH 99 ARE INDEXED AS AN ARRAY BY fml/libfml/F_error.c

@@ -1,0 +1,616 @@
+$       Copyright (c) 1998 BEA Systems, Inc.
+$       All rights reserved
+$
+$       THIS IS UNPUBLISHED PROPRIETARY
+$       SOURCE CODE OF BEA, Inc.
+$       The copyright notice above does not
+$       evidence any actual or intended
+$       publication of such source code.
+$
+$
+$ Any new Orb messages should be added to either this file, LIBORB.text,
+$ or to LIBORBCMD.text.
+$
+$ Messages named OBB_CMD_... should be added to
+$
+$   orb/src/LIBORBCMD.text
+$
+$ and any other messages, OBB_<anything but CMD>_..., to
+$
+$   orb/src/LIBORB.text
+$
+$ Please add new messages at the end of the respective .text file
+$
+$ NOTE: Adding messages that are not to be processed by the build awk
+$       scripts should be placed after the "$ #endscan" in the file.
+$
+$ Be sure to follow the format of the existing message definitions:
+$
+$   $
+$   $ Name: <message name>   Severity: <severity>   Exception: <exception>
+$   <number> "<SEVERITY>: <message text>."
+$
+$ where
+$   <message name> - Should be typed in without the OBB_ prefix.
+$   <severity>     - Should be one of: Info, Success, Warning, Error, or Fatal.
+$   <exception>    - Should be a CORBA exception name, or 0 (zero) if none.
+$   <number>       - Should be the next successive number.
+$   <SEVERITY>     - Should be one of: INFO, WARN, ERROR, or FATAL.
+$   <message text> - Should include %s for any parameter (that is, each %s
+$                    replaces what used to be a &<param>& in now obsolete
+$                    obbmsg.tpl).
+$
+$ Comments added after the "$set" below must begin with "$ #".
+$
+$ Messages marked as OBSOLETE or INTERNAL USE ONLY are never returned
+$ externally and should not be documented.
+$
+$
+$ ident	"@(#) orb/src/LIBORB.text	$Revision: 1.12 $"
+$ catalogue: LIBORB_CAT
+$quote "
+$set 1
+$ catcheck:OFF
+$
+$ Name: SUCCESS			Severity: Success   Exception: 0
+1 "INFO: Successful completion."
+$
+$ Name: ERROR			Severity: Error     Exception: UNKNOWN
+2 "ERROR: Operation failed."
+$
+$ Name: FATAL			Severity: Fatal     Exception: UNKNOWN
+3 "FATAL: Fatal error detected."
+$
+$ Name: COM_NOTFND		Severity: Error     Exception: UNKNOWN
+4 "ERROR: Item not found."
+$
+$ Name: COM_BADLIST		Severity: Error     Exception: BAD_PARAM
+5 "ERROR: Bad list."
+$
+$ Name: COM_BADLSTINDX		Severity: Error     Exception: BAD_PARAM
+6 "ERROR: Index out of range."
+$
+$ Name: COM_INSUFVM		Severity: Fatal     Exception: NO_MEMORY
+7 "FATAL: Insufficient memory."
+$
+$ Name: COM_FILNOTFND		Severity: Error     Exception: UNKNOWN
+8 "ERROR: Could not find file `%s'."
+$
+$ Name: COM_FILNOPRIV		Severity: Error     Exception: NO_PERMISSION
+9 "ERROR: Insufficient privilege to access file `%s'."
+$
+$ Name: COM_FILNOAVAIL		Severity: Error     Exception: UNKNOWN
+10 "ERROR: File `%s' not available."
+$
+$ Name: COM_BADFILSPEC		Severity: Error     Exception: UNKNOWN
+11 "ERROR: Bad file specification `%s'."
+$
+$ Name: COM_BUFTOOSMALL		Severity: Error     Exception: BAD_PARAM
+12 "ERROR: Buffer too small."
+$
+$ Name: COM_FILCREFAIL		Severity: Error     Exception: UNKNOWN
+13 "ERROR: Could not create file `%s'."
+$
+$ Name: COM_BADSTATUS		Severity: Error     Exception: BAD_PARAM
+14 "ERROR: Unrecognized status `%s' attempting to get a message."
+$
+$ Name: COM_INTERROR		Severity: Error     Exception: INTERNAL
+15 "ERROR: An internal error has occurred."
+$
+$ Name: COM_BADPARAMTYP		Severity: Error     Exception: BAD_PARAM
+16 "ERROR: Parameter `%s' is not of type CORBA_STRING."
+$
+$ Name: COM_TCINTERROR		Severity: Error     Exception: INTERNAL
+17 "ERROR: A typecode internal error has occurred."
+$
+$ Name: COM_NOBUFSPEC		Severity: Error     Exception: 0
+18 "ERROR: No buffer specified."
+$
+$ Name: COM_UNKENVVAR		Severity: Error     Exception: 0
+19 "ERROR: Unknown environment variable."
+$
+$ # OBSOLETE
+$ Name: COM_BADLSTTYP		Severity: Error     Exception: BAD_TYPECODE
+20 "ERROR: Bad type specified for list."
+$
+$ # OBSOLETE
+$ Name: COM_LSTTYPMISM		Severity: Error     Exception: BAD_PARAM
+21 "ERROR: Expected list type does not match actual list type."
+$
+$ # OBSOLETE
+$ Name: COM_BADLSTOP		Severity: Error     Exception: BAD_OPERATION
+22 "ERROR: Invalid list operation."
+$
+$ Name: COM_LSTELMALREX		Severity: Error     Exception: UNKNOWN
+23 "ERROR: List element already exists."
+$
+$ Name: COM_BADLSTCNT		Severity: Error     Exception: BAD_PARAM
+24 "ERROR: Count specified for list is invalid."
+$
+$ Name: COM_BADDATATYPE		Severity: Error     Exception: BAD_TYPECODE
+25 "ERROR: Invalid data type specified."
+$
+$ Name: COM_NOPRIV		Severity: Error     Exception: NO_PERMISSION
+26 "ERROR: Insufficient privilege to perform operation."
+$
+$ # OBSOLETE
+$ Name: COM_LISTSTATIC		Severity: Error     Exception: UNKNOWN
+27 "ERROR: List is static; cannot be extended."
+$
+$ Name: NOTUSED_28			Severity: Error     Exception: 0
+28 ""
+$
+$ Name: COM_ISNOTLOCAL		Severity: Error     Exception: UNKNOWN
+29 "ERROR: The endpoint is not a local endpoint"
+$
+$ Name: NOTUSED_30			Severity: Error     Exception: 0
+30 ""
+$
+$ Name: NOTUSED_31			Severity: Error     Exception: 0
+31 ""
+$
+$ # OBSOLETE
+$ Name: COM_BADUUID		Severity: Error     Exception: BAD_PARAM
+32 "ERROR: Bad UUID `%s'."
+$
+$ Name: COM_SYSLDFAIL		Severity: Error     Exception: INITIALIZE
+33 "ERROR: Dynamic load of component `%s' for subsystem `%s' failed."
+$
+$ Name: COM_FILOPNFAIL		Severity: Error     Exception: UNKNOWN
+34 "ERROR: Could not open file `%s'."
+$
+$ Name: COM_FILRDFAIL		Severity: Error     Exception: UNKNOWN
+35 "ERROR: Could not read file `%s'."
+$
+$ Name: COM_FILLOCKED		Severity: Error     Exception: UNKNOWN
+36 "ERROR: The file `%s' is locked."
+$
+$ Name: COM_BADOP		Severity: Error     Exception: BAD_OPERATION
+37 "ERROR: Invalid operation."
+$
+$ Name: COM_BADOBJTYPE		Severity: Error     Exception: INV_OBJREF
+38 "ERROR: Bad object for operation."
+$
+$ Name: COM_INVPARAM		Severity: Error     Exception: BAD_PARAM
+39 "ERROR: Invalid parameter for operation."
+$
+$ # OBSOLETE
+$ Name: COM_BADSID		Severity: Error     Exception: BAD_PARAM
+40 "ERROR: Bad Security Identifier."
+$
+$ Name: COM_NOTYETIMPL		Severity: Error     Exception: NO_IMPLEMENT
+41 "ERROR: Not yet implemented."
+$
+$ Name: COM_UNKERRTXT		Severity: Error     Exception: UNKNOWN
+42 "ERROR:  unknown error: `%s'."
+$
+$ Name: COM_BADREPID		Severity: Error     Exception: BAD_PARAM
+43 "ERROR: Bad Repository Id `%s'."
+$
+$ Name: COM_FORWARDINGLOOP	Severity: Error     Exception: IMP_LIMIT
+44 "ERROR: GIOP Locate Forwarding loop detected."
+$
+$ Name: COM_NOSUPPORT		Severity: Error     Exception: UNKNOWN
+45 "ERROR: There is no support for this function."
+$
+$ Name: COM_NOCURRENT		Severity: Error     Exception: UNKNOWN
+46 "ERROR: No Current implementation was found."
+$
+$ # INTERNAL USE ONLY
+$ Name: COM_ISLOCAL		Severity: Error     Exception: UNKNOWN
+47 "ERROR: The endpoint is a local endpoint"
+$
+$ Name: COM_CURRENTALRREG	Severity: Error     Exception: UNKNOWN
+48 "ERROR: Current type was already registered."
+$
+$ Name: COM_MSGERRORMSG		Severity: Error     Exception: UNKNOWN
+49 "ERROR: MessageErrorMessage received"
+$
+$ Name: COM_ENTRYPOINTMISSING	Severity: Error     Exception: UNKNOWN
+50 "ERROR: Could not find the entry point `%s' in the dynamically loaded library `%s'."
+$
+$ Name: COM_UNSUPKIND		Severity: Warning   Exception: MARSHAL
+51 "WARN: One or more unsupported kinds were encountered."
+$
+$ Name: COM_NOUSEREXC		Severity: Warning   Exception: IMP_LIMIT
+52 "WARN: A UserException can not be thrown from this function."
+$
+$ Name: COM_INVSETUP		Severity: Error     Exception: INITIALIZE
+53 "ERROR: An error was detected in the configuration settings."
+$
+$ Name: NOTUSED_54		Severity: Error     Exception: 0
+54 ""
+$
+$ Name: DB_OBJALREXISTS		Severity: Error     Exception: UNKNOWN
+55 "ERROR: Specified object `%s' already exists."
+$
+$ Name: DB_OBJDBERR		Severity: Error     Exception: INTF_REPOS
+56 "ERROR: Repository error in `%s'."
+$
+$ # OBSOLETE
+$ Name: DB_BADATTROP		Severity: Error     Exception: BAD_OPERATION
+57 "ERROR: Illegal database operation for attribute `%s'."
+$
+$ Name: DB_ATTRALREX		Severity: Error     Exception: UNKNOWN
+58 "ERROR: Attribute `%s' already exists."
+$
+$ Name: DB_BADOBJNAME		Severity: Error     Exception: INV_IDENT
+59 "ERROR: Bad object name `%s'."
+$
+$ Name: DB_BADOBJTYPE		Severity: Error     Exception: BAD_TYPECODE
+60 "ERROR: Bad type `%s' for object `%s'."
+$
+$ Name: DB_BADOBJID		Severity: Error     Exception: 0
+61 "ERROR: Bad object identifier."
+$
+$ Name: DB_OBJNOTFND		Severity: Error     Exception: UNKNOWN
+62 "ERROR: Object `%s' not found."
+$
+$ # INTERNAL USE ONLY
+$ Name: DB_NOATTRSFND		Severity: Error     Exception: UNKNOWN
+63 "ERROR: No attributes found."
+$
+$ Name: DB_ATTRNOTFND		Severity: Error     Exception: UNKNOWN
+64 "ERROR: Attribute `%s' not found."
+$
+$ Name: DB_VALUENOTFND		Severity: Error     Exception: UNKNOWN
+65 "ERROR: Value not found."
+$
+$ Name: DB_DBFILEERR		Severity: Error     Exception: INTF_REPOS
+66 "ERROR: File error for repository `%s'."
+$
+$ Name: DB_DBLOCKED		Severity: Error     Exception: INTF_REPOS
+67 "ERROR: The repository `%s' is locked."
+$
+$ Name: DB_DBNOTFND		Severity: Error     Exception: INTF_REPOS
+68 "ERROR: Repository `%s' not found."
+$
+$ Name: DB_NODBSPEC		Severity: Error     Exception: INTF_REPOS
+69 "ERROR: No repository specified."
+$
+$ # INTERNAL USE ONLY
+$ Name: DB_MODECONFL		Severity: Error     Exception: INTF_REPOS
+70 "ERROR: Repository `%s' opened in wrong mode."
+$
+$ Name: DB_DBFULL		Severity: Error     Exception: IMP_LIMIT
+71 "ERROR: Repository `%s' is full."
+$
+$ Name: DB_OBJISREF		Severity: Error     Exception: UNKNOWN
+72 "ERROR: Object is referenced by other objects."
+$
+$ # INTERNAL USE ONLY
+$ Name: DB_BADHANDLE		Severity: Error     Exception: BAD_PARAM
+73 "ERROR: Bad repository handle."
+$
+$ # INTERNAL USE ONLY
+$ Name: DB_BADDBOP		Severity: Error     Exception: BAD_OPERATION
+74 "ERROR: Bad database operation."
+$
+$ Name: DB_BADVERSION		Severity: Error     Exception: INTF_REPOS
+75 "ERROR: Bad database version."
+$
+$ Name: DB_NOPRIV		Severity: Error     Exception: NO_PERMISSION
+76 "ERROR: No privilege for attempted operation on repository `%s'."
+$
+$ Name: DB_TIMEOUT		Severity: Error     Exception: INTF_REPOS
+77 "ERROR: Database operation on repository `%s' timed out."
+$
+$ Name: DB_BADTAG		Severity: Error     Exception: INTF_REPOS
+78 "ERROR: File `%s' is not a valid ORB configuration file."
+$
+$ Name: DB_INTERROR		Severity: Error     Exception: INTERNAL
+79 "ERROR: An internal error has occurred."
+$
+$ Name: DB_DBFILEERRTXT		Severity: Error     Exception: INTF_REPOS
+80 "ERROR: File error: `%s'."
+$
+$ Name: DB_BADOBJREF		Severity: Error     Exception: BAD_PARAM
+81 "ERROR: Invalid Object Reference."
+$
+$ Name: DB_INVOVERRIDE		Severity: Error     Exception: BAD_PARAM
+82 "ERROR: Invalid Override."
+$
+$ Name: DB_OBJINHERITED		Severity: Error     Exception: BAD_PARAM
+83 "ERROR: Container %s Is Inherited By %s."
+$
+$ Name: DB_NOTDEL		Severity: Error     Exception: BAD_PARAM
+84 "ERROR: %s Not Deleted."
+$
+$ Name: DB_CORRUPTED		Severity: Error     Exception: BAD_PARAM
+85 "ERROR: Repository Corrupted."
+$
+$ Name: DB_BADREPOSITORYID	Severity: Error     Exception: BAD_PARAM
+86 "ERROR: Bad Repository Id `%s'."
+$
+$ Name: DB_INVCONTAINER		Severity: Error     Exception: BAD_PARAM
+87 "ERROR: Invalid Container `%s'."
+$
+$ Name: DB_BASEOBJNOTFND	Severity: Error     Exception: BAD_PARAM
+88 "ERROR: Base Object %s Not Found."
+$
+$ Name: DB_BADTYPE		Severity: Error     Exception: BAD_PARAM
+89 "ERROR: Bad Type %s."
+$
+$ Name: DB_INVLIMITTYPE		Severity: Error     Exception: BAD_PARAM
+90 "ERROR: Invalid Limit Type %s."
+$
+$ Name: DB_ATTRVALNOTFND	Severity: Error     Exception: BAD_PARAM
+91 "ERROR: Specified Attribute Value Not Found For Attribute `%s'."
+$
+$ Name: DB_INVCONSTVALUE	Severity: Error     Exception: BAD_PARAM
+92 "ERROR: Invalid constant value."
+$
+$ Name: DB_BADRESULT		Severity: Error     Exception: BAD_PARAM
+93 "ERROR: Bad Result Type."
+$
+$ Name: DB_BADATTRIBUTETYPE	Severity: Error     Exception: BAD_PARAM
+94 "ERROR: Bad Attribute Type."
+$
+$ Name: DB_BADTYPETYPE		Severity: Error     Exception: BAD_PARAM
+95 "ERROR: Bad TypeDef Type."
+$
+$ Name: DB_BADCONSTTYPE		Severity: Error     Exception: BAD_PARAM
+96 "ERROR: Bad Constant Type."
+$
+$ Name: DB_BADEXCEPTYPE		Severity: Error     Exception: BAD_PARAM
+97 "ERROR: Bad Exception Type."
+$
+$ Name: DB_INVTYPECODEID	Severity: Error     Exception: BAD_PARAM
+98 "ERROR: Invalid TypeCode Id %s."
+$
+$ Name: DB_SIGNOTFETCH		Severity: Error     Exception: BAD_PARAM
+99 "ERROR: Signature %s Not Fetched."
+$
+$ Name: DB_BADTYPEID		Severity: Error     Exception: 0
+100 "ERROR: Bad Type Id %s."
+$
+$ Name: NOTUSED_101			Severity: Error     Exception: 0
+101 ""
+$
+$ Name: NOTUSED_102			Severity: Error     Exception: 0
+102 ""
+$
+$ Name: INV_TRANSERR		Severity: Error     Exception: COMM_FAILURE
+103 "ERROR: Transport error `%s'."
+$
+$ Name: INV_ARGMISMATCH		Severity: Error     Exception: BAD_PARAM
+104 "ERROR: Specified arguments do not match defined arguments."
+$
+$ Name: INV_MTHDNOTFND		Severity: Error     Exception: NO_IMPLEMENT
+105 "ERROR: Specified method not found on implementation skeleton."
+$
+$ Name: NOTUSED_106		Severity: Error     Exception: 0
+106 ""
+$
+$ Name: NOTUSED_107			Severity: Error     Exception: 0
+107 ""
+$
+$ Name: INV_UNKNODE		Severity: Error     Exception: COMM_FAILURE
+108 "ERROR: Unknown node `%s' specified."
+$
+$ Name: INV_DYNLDNOTSUP		Severity: Error     Exception: BAD_OPERATION
+109 "ERROR: Dynamic load is not supported on this platform."
+$
+$ Name: INV_DYNLDFAIL		Severity: Error     Exception: UNKNOWN
+110 "ERROR: The shared library `%s' could could not be dynamically loaded."
+$
+$ Name: INV_SRVALRREG		Severity: Error     Exception: OBJ_ADAPTER
+111 "ERROR: The specified server is already registered."
+$
+$ Name: INV_BADDYNLDSPEC	Severity: Error     Exception: INV_IDENT
+112 "ERROR: Bad dynamic library specification."
+$
+$ Name: INV_TRANSCANTINIT	Severity: Error     Exception: 0
+113 "ERROR: The underlying transport could not be initialized."
+$
+$ Name: INV_INTERROR		Severity: Error     Exception: INTERNAL
+114 "ERROR: An internal software error occurred."
+$
+$ Name: INV_BADOBJNAME		Severity: Error     Exception: INV_IDENT
+115 "ERROR: Bad object name `%s'."
+$
+$ Name: INV_BADTRANSHND		Severity: Error     Exception: INTERNAL
+116 "ERROR: Transport handle is invalid."
+$
+$ Name: INV_COMMFAIL		Severity: Error     Exception: COMM_FAILURE
+117 "ERROR: Transport level communication failed."
+$
+$ Name: INV_TRANSSRVNTFD	Severity: Error     Exception: UNKNOWN
+118 "ERROR: The requested server was not found or is not accessible on the network."
+$
+$ Name: INV_MRSHEXCBUF		Severity: Error     Exception: INTERNAL
+119 "ERROR: Exceeded marshalling buffer."
+$
+$ Name: INV_TRANSBADMSG		Severity: Error     Exception: INTERNAL
+120 "ERROR: The transport message was not properly identified."
+$
+$ Name: INV_BADARG		Severity: Error     Exception: INV_OBJREF
+121 "ERROR: Invalid argument."
+$
+$ Name: INV_RESMISMATCH		Severity: Error     Exception: BAD_PARAM
+122 "ERROR: Specified result does not match defined result."
+$
+$ Name: INV_BADSTRLEN		Severity: Error     Exception: BAD_PARAM
+123 "ERROR: String length is greater than the bound."
+$
+$ Name: INV_BADANYTYPE		Severity: Error     Exception: MARSHAL
+124 "ERROR: An invalid type was specified for an ANY argument."
+$
+$ Name: INV_ARGMISMCHNUM	Severity: Error     Exception: BAD_PARAM
+125 "ERROR: Specified number of arguments do not match defined number of arguments."
+$
+$ Name: INV_ARGMISMCHNAM	Severity: Error     Exception: BAD_PARAM
+126 "ERROR: Specified argument name `%s' does not match defined argument name."
+$
+$ Name: INV_ARGMISMCHTYP	Severity: Error     Exception: BAD_PARAM
+127 "ERROR: Specified argument type does not match defined argument type for `%s'."
+$
+$ Name: INV_TCNOTFND		Severity: Error     Exception: BAD_TYPECODE
+128 "ERROR: TypeCode ID not found."
+$
+$ Name: INV_TIMEOUT		Severity: Error     Exception: COMM_FAILURE
+129 "ERROR: Transport level send timeout."
+$
+$ Name: INV_NOOBJREF		Severity: Error     Exception: MARSHAL
+130 "ERROR: The object is constrained to be local."
+$
+$ Name: NOTUSED_131		Severity: Error     Exception: 0
+131 ""
+$
+$ Name: REG_NOMORE		Severity: Success   Exception: 0
+132 "INFO: No more items."
+$
+$ #
+$ #**********************************************************************
+$ # Messages 133 - 146 are INTERNAL USE ONLY
+$ #
+$ Name: REG_INVKEY		Severity: Error     Exception: INV_OBJREF
+133 "ERROR: The registry key is invalid."
+$
+$ Name: REG_KEYCREFAIL		Severity: Error     Exception: PERSIST_STORE
+134 "ERROR: Could not create key `%s'."
+$
+$ Name: REG_KEYDELFAIL		Severity: Error     Exception: PERSIST_STORE
+135 "ERROR: Could not delete key `%s'."
+$
+$ Name: REG_KEYMODFAIL		Severity: Error     Exception: PERSIST_STORE
+136 "ERROR: Could not modify key `%s'."
+$
+$ Name: REG_KEYNOTFND		Severity: Error     Exception: PERSIST_STORE
+137 "ERROR: Could not find key `%s'."
+$
+$ Name: REG_VALCREFAIL		Severity: Error     Exception: PERSIST_STORE
+138 "ERROR: Could not create named value `%s'."
+$
+$ Name: REG_VALDELFAIL		Severity: Error     Exception: PERSIST_STORE
+139 "ERROR: Could not delete named value `%s'."
+$
+$ Name: REG_VALMODFAIL		Severity: Error     Exception: PERSIST_STORE
+140 "ERROR: Could not modify named value `%s'."
+$
+$ Name: REG_VALNOTFND		Severity: Error     Exception: PERSIST_STORE
+141 "ERROR: Could not find named value `%s'."
+$
+$ Name: REG_CONNFAIL		Severity: Error     Exception: UNKNOWN
+142 "ERROR: Could not connect to `%s' registry."
+$
+$ Name: REG_NOACCESS		Severity: Error     Exception: NO_PERMISSION
+143 "ERROR: Access is denied."
+$
+$ Name: REG_CLOSEKEYFAIL	Severity: Error     Exception: UNKNOWN
+144 "ERROR: Error closing key."
+$
+$ Name: REG_SUBKEYOPEN		Severity: Error     Exception: UNKNOWN
+145 "ERROR: Subkeys for key are still open."
+$
+$ Name: REG_INVREGDAT		Severity: Error     Exception: BAD_OPERATION
+146 "ERROR: The registry data is invalid for specified key."
+$ #
+$ # Messages 133 - 146 are INTERNAL USE ONLY
+$ #**********************************************************************
+$ #
+$ Name: REG_REGNOTFND		Severity: Error     Exception: INTF_REPOS
+147 "ERROR: Registry `%s' not found."
+$
+$ Name: NOTUSED_148			Severity: Error     Exception: 0
+148 ""
+$
+$ Name: OA_ALREX		Severity: Error     Exception: OBJ_ADAPTER
+149 "ERROR: OA already exists."
+$
+$ Name: OA_NOTEXISTS		Severity: Error     Exception: OBJ_ADAPTER
+150 "ERROR: OA does not exist."
+$
+$ Name: NOTUSED_151			Severity: Error     Exception: 0
+151 ""
+$
+$ Name: OA_NOTACTIVE		Severity: Error     Exception: OBJ_ADAPTER
+152 "ERROR: OA not active."
+$
+$ Name: OA_SUSPENDED		Severity: Error     Exception: OBJ_ADAPTER
+153 "ERROR: OA is suspended."
+$
+$ Name: OA_QUETOOLARGE		Severity: Error     Exception: OBJ_ADAPTER
+154 "ERROR: OA queue is too large."
+$
+$ Name: OA_OBJNOTFND		Severity: Error     Exception: OBJECT_NOT_EXIST
+155 "ERROR: OA object not found."
+$
+$ Name: OA_SRVNOTACT		Severity: Error     Exception: OBJ_ADAPTER
+156 "ERROR: OA Servant not active."
+$
+$ Name: OA_SRVNOTUNIQUE		Severity: Error     Exception: OBJ_ADAPTER
+157 "ERROR: OA Servant not unique."
+$
+$ Name: OA_DISCARDREQ		Severity: Error     Exception: TRANSIENT
+158 "ERROR: Server Request discarded."
+$
+$ Name: OA_NOTSRVACT		Severity: Error     Exception: TRANSIENT
+159 "ERROR: Object is not a ServantActivator."
+$
+$ Name: OA_NOTSRVLOC		Severity: Error     Exception: TRANSIENT
+160 "ERROR: Object is not a ServantLocator."
+$
+$ Name: OA_NOTADPACT		Severity: Error     Exception: TRANSIENT
+161 "ERROR: Object is not a AdapterActivator."
+$
+$ Name: NOTUSED_162			Severity: Error     Exception: 0
+162 ""
+$
+$ Name: COM_TUX_ERR		Severity: Error     Exception: UNKNOWN
+163 "ERROR: An error was returned by Tuxedo."
+$
+$ Name: INV_NOTOPER		Severity: Error     Exception: MARSHAL
+164 "ERROR: '%s' is not an operation in the interface."
+$
+$ Name: COM_ORBNOTINIT		Severity: Error     Exception: BAD_PARAM
+165 "ERROR: The ORB is not initialized."
+$
+$ Name: COM_BADURLTYPE		Severity: Error     Exception: BAD_PARAM
+166 "ERROR: Unknown URL type specified."
+$
+$ Name: COM_BADURLPROTOCOL	Severity: Error     Exception: BAD_PARAM
+167 "ERROR: Unknown URL protocol specified."
+$
+$ Name: COM_BADURLADDRESS	Severity: Error     Exception: BAD_PARAM
+168 "ERROR: Bad URL address specified."
+$
+$ Name: COM_MALFORMEDURL	Severity: Error     Exception: BAD_PARAM
+169 "ERROR: The specified URL is malformed."
+$
+$ Name: DB_SUPPOBJNOTFND	Severity: Error     Exception: BAD_PARAM
+170 "ERROR: Support Interface %s Not Found."
+$
+$ Name: COM_UNKNOWNINITSVC	Severity: Error     Exception: BAD_PARAM
+171 "ERROR: The specified initial service is unknown."
+$ #endscan
+$ catcheck:ON
+$
+$ --------------------------------------------------------------------
+$ catcheck:OFF
+$
+$ Application Request Level Interceptor Errors
+$
+1000 "ERROR: An internal error occurred - %s"
+1001 "ERROR: Memory allocation failed - %s"
+1002 "ERROR: Interceptor initialization routine failed - %s"
+1003 "ERROR: Failed to load interceptor library - %s"
+1004 "ERROR: Interceptors must be supplied by initialization routine - %s"
+$ --------------------------------------------------------------------
+$ catcheck:ON
+$
+$ Plugin failures
+$
+1010 "ERROR: Authorization plugin internal failure in preop - %d"
+1011 "ERROR: Audit plugin internal failure in preop - %d"
+1012 "ERROR: Authorization plugin internal failure in postop - %d"
+1013 "ERROR: Audit plugin internal failure in postop - %d"
+$ --------------------------------------------------------------------
+$ catcheck:OFF
+$
+$ TGIOP related WARNINGS and ERRORS
+$
+2000 "WARN: Return from method with outstanding replies %s"
+$
+$ catcheck:ON
+

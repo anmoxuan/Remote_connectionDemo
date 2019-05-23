@@ -1,0 +1,679 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPTF</name>
+    </assembly>
+    <members>
+        <member name="T:EP.EPTF">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000001">
+            <summary>
+              查找类似 将同时删除数据库记录和服务器文件内容 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000002">
+            <summary>
+              查找类似 本地文件路径不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000003">
+            <summary>
+              查找类似 服务器路径不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000004">
+            <summary>
+              查找类似 错误：文件【{0}】已存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000005">
+            <summary>
+              查找类似 【{0}】目录分类不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000006">
+            <summary>
+              查找类似 保存路径 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000007">
+            <summary>
+              查找类似 传入的FTP路径为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000008">
+            <summary>
+              查找类似 传入的分类目录为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000009">
+            <summary>
+              查找类似 传入的唯一码为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000010">
+            <summary>
+              查找类似 传入的文件本地路径为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000011">
+            <summary>
+              查找类似 传入的文件名为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000012">
+            <summary>
+              查找类似 错误 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000013">
+            <summary>
+              查找类似 服务器中没有文件，无法下载，是否删除数据库记录？ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000014">
+            <summary>
+              查找类似 打开 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000015">
+            <summary>
+              查找类似 默认分类 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000016">
+            <summary>
+              查找类似 请勾选需要删除的文件 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000017">
+            <summary>
+              查找类似 请勾选需要上传的文件 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000018">
+            <summary>
+              查找类似 【{0}】,是否删除数据库记录？ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000019">
+            <summary>
+              查找类似 上传成功 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000020">
+            <summary>
+              查找类似 未传入获得文件方式 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:EP.EPTF.EPTFC0000021">
+            <summary>
+              查找类似 下载 的本地化字符串。
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF01.ShowFileList(System.String)">
+            <summary>
+            显示当前唯一码下的附件信息
+            </summary>
+            <param name="recID">唯一码</param>
+        </member>
+        <member name="F:EP.FormEPTF01.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF01.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EP.FormEPTF01.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EP.FormEPTF01.DefaultFileFilter">
+            <summary>
+            默认可上传文件格式
+            </summary>
+        </member>
+        <member name="P:EP.FormEPTF01.RecId">
+            <summary>
+            当前唯一码
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.ds1">
+            <summary>
+            数据库记录DataSet
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.ds2">
+            <summary>
+            服务器记录DataSet
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.delDt1">
+            <summary>
+            数据库记录删除表
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.delDt2">
+            <summary>
+            服务器记录删除表
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.ftpUrl">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.ftpUserId">
+            <summary>
+            服务器用户名
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.ftpPassWord">
+            <summary>
+            服务器密码
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF03.check">
+            <summary>
+            是否对比中
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_Load(System.Object,System.EventArgs)">
+            <summary>
+            画面加载
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.CreateDataSet">
+            <summary>
+            初始化dataSet
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.CreateTable">
+            <summary>
+            初始化删除记录表
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.GetConfig">
+            <summary>
+            获取配置信息(ftp地址，用户，密码)
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.GridControl(System.Boolean)">
+            <summary>
+            表格相关控制
+            </summary>
+            <param name="flag"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            F2查询
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.QueryDB(System.String)">
+            <summary>
+            查询数据库记录列表
+            </summary>
+            <param name="recId">唯一码</param>
+        </member>
+        <member name="M:EP.FormEPTF03.QueryFTP(System.String)">
+            <summary>
+            查询服务器记录列表
+            </summary>
+            <param name="recId">唯一码</param>
+        </member>
+        <member name="M:EP.FormEPTF03.GetPassId(System.String)">
+            <summary>
+            获得服务器密码
+            </summary>
+            <param name="ftpAddress"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            F3对比
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.gridView1_RowStyle(System.Object,DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs)">
+            <summary>
+            数据库记录表格颜色控制
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.gridView2_RowStyle(System.Object,DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs)">
+            <summary>
+            服务器记录表格颜色控制
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            F4准备
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            F4确定
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.FormEPTF01_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            F4取消
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.efDevGrid1_EF_GridBar_Remove_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            数据库记录表删除事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.efDevGrid2_EF_GridBar_Remove_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            服务器记录表删除事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.FormEPTF03.LinkToFtp(System.String)">
+            <summary>
+            连接ftp
+            </summary>
+            <param name="ftpUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EP.FormEPTF03.FtpFileList(System.String,System.String)">
+            <summary>
+            获得ftp当前路径下的文件列表
+            </summary>
+            <param name="ftpUrl">ftp路径</param>
+            <param name="method">不同获取方法(简要/详细)</param>
+            <param name="type">需要文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EP.FormEPTF03.DeleteFile(System.String,System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EP.FormEPTF03.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF03.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EP.FormEPTF03.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EP.FormEPTF02.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EP.FormEPTF02.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EP.FormEPTF02.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ftpUrl">
+            <summary>
+            ftp存放附件文件夹地址
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ftpUserId">
+            <summary>
+            ftp用户名
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ftpPassWord">
+            <summary>
+            ftp密码
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ftpEncode">
+            <summary>
+            编码格式
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ds1">
+            <summary>
+            数据库DataSet
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.ds2">
+            <summary>
+            服务器DataSet
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.defaultFileFilter">
+            <summary>
+            默认可上传文件格式
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.isUseBar">
+            <summary>
+            是否使用打开/上传/删除功能
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.code">
+            <summary>
+            服务器地址代码值
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.classCode">
+            <summary>
+            分类代码
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.RecId">
+            <summary>
+            当前唯一码
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF01.classification">
+            <summary>
+            当前选中的分类
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.UserEPTF01_Load(System.Object,System.EventArgs)">
+            <summary>
+            窗体加载
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.GetConfig">
+            <summary>
+            获取配置信息(ftp地址，用户，密码)
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.CreateDS">
+            <summary>
+            创建DataSet
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.barButtonItem1_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            打开按钮
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.barButtonItem4_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            上传按钮
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.barButtonItem2_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            删除按钮
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.gridView1_RowCellClick(System.Object,DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs)">
+            <summary>
+            点击下载打开，打开控制
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.gridView1_RowStyle(System.Object,DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs)">
+            <summary>
+            显示颜色控制
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.QueryDB(System.String)">
+            <summary>
+            查询数据库
+            </summary>
+            <param name="recId"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.QueryFTP(System.String)">
+            <summary>
+            查询服务器记录
+            </summary>
+            <param name="recId"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.Check">
+            <summary>
+            比对数据库和服务器记录
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpFileList(System.String,System.String)">
+            <summary>
+            获得ftp当前路径下的文件列表
+            </summary>
+            <param name="ftpUrl">ftp路径</param>
+            <param name="method">不同获取方法(简要/详细)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpMakeDir(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="ftpUrl"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpUploadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            FTP上传单个文件
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classify"></param>
+            <param name="filename"></param>
+            <param name="filelocalPath"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpDownloadFile(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="ftpUrl">ftp路径</param>
+            <param name="localPath">本地存放路径</param>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpDeleteFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            删除单个文件
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+            <param name="filename"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.stFtpDeleteFile(System.String,System.String,System.String)">
+            <summary>
+            删除classfy文件夹/recid文件夹/ftpurl文件夹
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.LinkToFtp(System.String)">
+            <summary>
+            连接ftp
+            </summary>
+            <param name="ftpUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EP.UserEPTF01.FtpMakeDir(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="ftpUrl"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.FtpUploadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="ftpUrl"></param>
+            <param name="filePath"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.FtpDownloadFile(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="ftpUrl">ftp路径</param>
+            <param name="localPath">本地存放路径</param>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:EP.UserEPTF01.FtpDeleteFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EP.UserEPTF01.getNewKey">
+            <summary>
+            提供主键
+            </summary>
+            <returns>主键</returns>
+        </member>
+        <member name="M:EP.UserEPTF01.UploadFile(System.String,System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            上传文件(不弹出文件选择框，直接传入文件本地路径)
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+            <param name="fileinfo"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.UpLoadFile(System.String,System.String@,System.String,System.String)">
+            <summary>
+            上传文件(弹出文件选择框)
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+            <param name="openfileDialogFilter"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.DownloadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            下载文件到本地默认路径
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+            <param name="filename"></param>
+            <param name="filelocalPath"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.DownloadFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            下载文件(可选择本地保存路径)
+            </summary>
+            <param name="ftpurl"></param>
+            <param name="recid"></param>
+            <param name="classfy"></param>
+            <param name="filename"></param>
+        </member>
+        <member name="M:EP.UserEPTF01.ShowFileList(System.String)">
+            <summary>
+            显示当前唯一码下的附件信息
+            </summary>
+            <param name="recID">唯一码</param>
+        </member>
+        <member name="F:EP.UserEPTF01.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF01.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EP.UserEPTF01.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EP.UserEPTF01.DefaultFileFilter">
+            <summary>
+            默认可上传文件格式
+            </summary>
+        </member>
+        <member name="F:EP.UserEPTF02.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EP.UserEPTF02.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EP.UserEPTF02.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>

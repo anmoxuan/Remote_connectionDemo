@@ -1,0 +1,16 @@
+E:\Remote_connectionDemo\FM\FMCCJ6REMOTE.dll.config
+E:\Remote_connectionDemo\FM\FMCCJ6REMOTE.dll
+E:\Remote_connectionDemo\FM\FMCCJ6REMOTE.pdb
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\Interop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\AxInterop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.csproj.ResolveComReference.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FM.Properties.Resources.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.csproj.GenerateResource.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.csproj.CoreCompileInputs.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.csproj.CopyComplete
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.pdb
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FM.FormFMJ601.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FM.FormFMJ602.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FM.FormFMJ603.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMCCJ6REMOTE.csprojAssemblyReference.cache

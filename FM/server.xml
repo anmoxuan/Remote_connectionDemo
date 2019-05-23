@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--服务器配置，Name（服务器名称），Host（服务器IP），Password（服务器连接密码），Prot（服务器端口号），Desc（服务备注名称），Status（服务连接状态），Key（快捷键连接）-->
+<Servers>
+  <Server id="1">
+    <Name>administrator</Name>
+    <Host>10.25.25.167</Host>
+    <Password>zwq123</Password>
+    <Prot>12005</Prot>
+    <Desc>server1</Desc>
+    <Status>0</Status>
+    <key>F1</key>
+  </Server>
+  <Server id="2">
+    <Name>administrator</Name>
+    <Host>10.25.25.33</Host>
+    <Password>123</Password>
+    <Prot>12005</Prot>
+    <Desc>server2</Desc>
+    <Status>0</Status>
+    <key>F2</key>
+  </Server>
+  <Server id="3">
+    <Name>administrator</Name>
+    <Host>10.25.25.208</Host>
+    <Password>zwq123</Password>
+    <Prot>12005</Prot>
+    <Desc>server3</Desc>
+    <Status>0</Status>
+    <key>F3</key>
+  </Server>
+<Server id="4">
+    <Name>administrator</Name>
+    <Host>10.25.25.208</Host>
+    <Password>zwq123</Password>
+    <Prot>12005</Prot>
+    <Desc>server4</Desc>
+    <Status>0</Status>
+    <key>F4</key>
+  </Server>
+</Servers>

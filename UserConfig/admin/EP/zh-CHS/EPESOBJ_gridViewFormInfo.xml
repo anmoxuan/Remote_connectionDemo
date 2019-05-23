@@ -1,0 +1,179 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="PreviewLineCount">-1</property>
+  <property name="PreviewIndent">-1</property>
+  <property name="HorzScrollStep">3</property>
+  <property name="FocusRectStyle">CellFocus</property>
+  <property name="ScrollStyle">LiveVertScroll, LiveHorzScroll</property>
+  <property name="LevelIndent">-1</property>
+  <property name="VertScrollTipFieldName" />
+  <property name="ChildGridLevelName" />
+  <property name="GroupFormat">{0}: [#image]{1} {2}</property>
+  <property name="NewItemRowText" />
+  <property name="GroupPanelText" />
+  <property name="PreviewFieldName" />
+  <property name="SynchronizeClones">true</property>
+  <property name="BorderStyle">Default</property>
+  <property name="ViewCaption" />
+  <property name="DetailHeight">350</property>
+  <property name="Name">gridViewFormInfo</property>
+  <property name="DetailTabHeaderLocation">Top</property>
+  <property name="OptionsLayout" isnull="true" iskey="true">
+    <property name="Columns" isnull="true" iskey="true">
+      <property name="StoreAppearance">true</property>
+      <property name="StoreAllOptions">true</property>
+    </property>
+    <property name="StoreAllOptions">true</property>
+    <property name="StoreAppearance">true</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Columns" iskey="true" value="10">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Width">35</property>
+      <property name="UnboundType">Boolean</property>
+      <property name="Caption"> </property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowSort">False</property>
+        <property name="ShowCaption">false</property>
+      </property>
+      <property name="Fixed">Left</property>
+      <property name="FieldName">54EA8C67-D921-4ddc-8ECE-114E2459816C</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Width">109</property>
+      <property name="Caption">画面名</property>
+      <property name="Name">colNAME</property>
+      <property name="FieldName">NAME</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Width">211</property>
+      <property name="Caption">画面描述</property>
+      <property name="Name">colDESCRIPTION</property>
+      <property name="FieldName">DESCRIPTION</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">3</property>
+      <property name="Width">91</property>
+      <property name="Caption">动态库</property>
+      <property name="Name">colDLLNAME</property>
+      <property name="FieldName">DLLNAME</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Caption">ACLID</property>
+      <property name="Name">colACLID</property>
+      <property name="FieldName">ACLID</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">4</property>
+      <property name="Width">67</property>
+      <property name="Caption">缩写</property>
+      <property name="Name">colABBREV</property>
+      <property name="FieldName">ABBREV</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Width">70</property>
+      <property name="Caption">图标编号</property>
+      <property name="Name">colICONNUM</property>
+      <property name="FieldName">ICONNUM</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">6</property>
+      <property name="Width">74</property>
+      <property name="Caption">调用方式</property>
+      <property name="Name">colFORM_CALL_MODE</property>
+      <property name="FieldName">FORM_CALL_MODE</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Width">72</property>
+      <property name="Caption">子系统</property>
+      <property name="Name">colAPPNAME</property>
+      <property name="FieldName">APPNAME</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Width">92</property>
+      <property name="Caption">程序路径</property>
+      <property name="Name">colDLLPATH</property>
+      <property name="FieldName">DLLPATH</property>
+    </property>
+  </property>
+  <property name="ViewCaptionHeight">-1</property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ShowGroupPanel">false</property>
+    <property name="EnableAppearanceEvenRow">true</property>
+    <property name="EnableAppearanceOddRow">true</property>
+    <property name="ColumnAutoWidth">false</property>
+  </property>
+  <property name="FixedLineWidth">1</property>
+  <property name="VertScrollVisibility">Auto</property>
+  <property name="RowHeight">-1</property>
+  <property name="IndicatorWidth">31</property>
+  <property name="ColumnPanelRowHeight">-1</property>
+  <property name="RowSeparatorHeight">0</property>
+  <property name="FooterPanelHeight">-1</property>
+  <property name="HorzScrollVisibility">Auto</property>
+  <property name="GroupRowHeight">-1</property>
+  <property name="Appearance" isnull="true" iskey="true">
+    <property name="Empty" iskey="true" value="Empty">
+      <property name="BackColor">Transparent</property>
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseBackColor">true</property>
+      </property>
+    </property>
+  </property>
+  <property name="FormatConditions" iskey="true" value="2">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Appearance" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseForeColor">true</property>
+        </property>
+        <property name="ForeColor">Black</property>
+      </property>
+      <property name="Value1" type="System.Boolean">false</property>
+      <property name="Condition">Equal</property>
+      <property name="ColumnName" />
+      <property name="ApplyToRow">true</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Appearance" isnull="true" iskey="true">
+        <property name="BackColor">49, 106, 197</property>
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseBackColor">true</property>
+          <property name="UseForeColor">true</property>
+        </property>
+        <property name="ForeColor">White</property>
+      </property>
+      <property name="Value1" type="System.Boolean">true</property>
+      <property name="Condition">Equal</property>
+      <property name="ColumnName" />
+      <property name="ApplyToRow">true</property>
+    </property>
+  </property>
+  <property name="ActiveFilterString" />
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

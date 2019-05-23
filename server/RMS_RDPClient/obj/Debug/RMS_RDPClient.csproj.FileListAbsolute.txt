@@ -1,0 +1,17 @@
+E:\VSTS30\RMS2.0\Setup\PC\bin\rdp\RMS_RDPClient.exe.config
+E:\VSTS30\RMS2.0\Setup\PC\bin\rdp\RMS_RDPClient.exe
+E:\VSTS30\RMS2.0\Setup\PC\bin\rdp\RMS_RDPClient.pdb
+E:\VSTS30\RMS2.0\Source\PC\RMS_RDPClient\obj\Debug\VNCClientTest.Properties.Resources.resources
+E:\VSTS30\RMS2.0\Source\PC\RMS_RDPClient\obj\Debug\Vnc.Viewer.View.resources
+E:\VSTS30\RMS2.0\Source\PC\RMS_RDPClient\obj\Debug\RMS_RDPClient.csproj.GenerateResource.Cache
+E:\VSTS30\RMS2.0\Source\PC\RMS_RDPClient\obj\Debug\RMS_RDPClient.exe
+E:\VSTS30\RMS2.0\Source\PC\RMS_RDPClient\obj\Debug\RMS_RDPClient.pdb
+E:\VSTS30\RMS2.0\Setup\PCNew\bin\rdp\RMS_RDPClient.exe.config
+E:\VSTS30\RMS2.0\Setup\PCNew\bin\rdp\RMS_RDPClient.exe
+E:\VSTS30\RMS2.0\Setup\PCNew\bin\rdp\RMS_RDPClient.pdb
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\VNCClientTest.Properties.Resources.resources
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\Vnc.Viewer.View.resources
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\RMS_RDPClient.csproj.GenerateResource.Cache
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\RMS_RDPClient.exe
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\RMS_RDPClient.pdb
+E:\VSTS30\RMS2.0\Source\PCNew\RMS_RDPClient\obj\Debug\RMS_RDPClient.csprojResolveAssemblyReference.cache

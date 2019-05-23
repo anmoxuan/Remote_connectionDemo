@@ -1,0 +1,7 @@
+E:\iPlat4C\trunk\Client\EP\EH.exe
+E:\iPlat4C\trunk\Client\EP\EH.pdb
+E:\iPlat4C\trunk\Client\EH\obj\Release\ResolveAssemblyReference.cache
+E:\iPlat4C\trunk\Client\EH\obj\Release\EH.Properties.Resources.resources
+E:\iPlat4C\trunk\Client\EH\obj\Release\EH.csproj.GenerateResource.Cache
+E:\iPlat4C\trunk\Client\EH\obj\Release\EH.exe
+E:\iPlat4C\trunk\Client\EH\obj\Release\EH.pdb

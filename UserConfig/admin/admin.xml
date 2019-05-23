@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<UserConfigFile>
+  <USERCONFIG APP="BGZZM0" COMPANY="BS" CULTURE="zh-CHS" MENUMODE="1" TABPOS="TOP" SKIN="iMaginary" MDI="true" MAXRECENTFILES="10" FORMUNIQ="false" LOCKTIME="30" MSGBOLD="false" MSGCOLOR="0" MSGFONTSIZE="9" MSGFONTNAME="Tahoma" SRVTIME="true" SHOW_MSG_CENTER_ONSTART="false" SHOW_ALERT="true" MSG_INTERVAL="5" CLOSE_BUTTON_SHOW_MODE="4" EXPORT_FORMAT="0" EXPORT_COL_BESTFIT="false" CLOUD_SYNC="false">
+    <APPNAME NAME="BGZZM0">
+      <COMPANY NAME="BS">
+        <FORM NAME="L2T01" DESCRIPTION="xj测试画面001" LOCK="false" />
+        <FORM NAME="EPEDCACHE" DESCRIPTION="Redis管理" LOCK="false" />
+        <FORM NAME="L2RMF" DESCRIPTION="远程修改键" LOCK="false" />
+        <FORM NAME="L2RC" DESCRIPTION="远程显示页面" LOCK="false" />
+        <FORM NAME="EPESOBJ" DESCRIPTION="应用系统资源管理" LOCK="false" />
+        <FORM NAME="L2RM" DESCRIPTION="远程主界面" LOCK="false" />
+        <FORM NAME="FMJ601" DESCRIPTION="远程主界面" LOCK="false" />
+      </COMPANY>
+    </APPNAME>
+  </USERCONFIG>
+</UserConfigFile>

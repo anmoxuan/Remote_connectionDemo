@@ -1,0 +1,15 @@
+E:\Remote_connectionDemo\Remote_connectionDemo\bin\Release\Remote_connectionDemo.exe.config
+E:\Remote_connectionDemo\Remote_connectionDemo\bin\Release\Remote_connectionDemo.exe
+E:\Remote_connectionDemo\Remote_connectionDemo\bin\Release\Remote_connectionDemo.pdb
+E:\Remote_connectionDemo\Remote_connectionDemo\bin\Release\Interop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\bin\Release\AxInterop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Interop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\AxInterop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.csproj.ResolveComReference.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.Form1.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.Form2.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.Properties.Resources.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.csproj.GenerateResource.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.csproj.CoreCompileInputs.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.exe
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Release\Remote_connectionDemo.pdb

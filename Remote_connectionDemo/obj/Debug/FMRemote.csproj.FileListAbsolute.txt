@@ -1,0 +1,15 @@
+E:\Remote_connectionDemo\FM\FMRemote.dll.config
+E:\Remote_connectionDemo\FM\FMRemote.dll
+E:\Remote_connectionDemo\FM\FMRemote.pdb
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\Interop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\AxInterop.MSTSCLib.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.csproj.ResolveComReference.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\L2.FormL2RM.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\L2.FormL2RC.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\L2.FormL2RMF.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FM.Properties.Resources.resources
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.csproj.GenerateResource.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.csproj.CoreCompileInputs.cache
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.csproj.CopyComplete
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.dll
+E:\Remote_connectionDemo\Remote_connectionDemo\obj\Debug\FMRemote.pdb

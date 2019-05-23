@@ -1,0 +1,6 @@
+$quote "
+$ ident	"@(#) cobol/cobatmi/COBAPI.text	$Revision: 1.3 $"
+$ catalog: COBAPI_CAT
+$set 1
+$ all messages down to here have been deleted
+1087 ""
