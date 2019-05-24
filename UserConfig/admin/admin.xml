@@ -7,8 +7,8 @@
         <FORM NAME="EPEDCACHE" DESCRIPTION="Redis管理" LOCK="false" />
         <FORM NAME="L2RMF" DESCRIPTION="远程修改键" LOCK="false" />
         <FORM NAME="L2RC" DESCRIPTION="远程显示页面" LOCK="false" />
-        <FORM NAME="EPESOBJ" DESCRIPTION="应用系统资源管理" LOCK="false" />
         <FORM NAME="L2RM" DESCRIPTION="远程主界面" LOCK="false" />
+        <FORM NAME="EPESOBJ" DESCRIPTION="应用系统资源管理" LOCK="false" />
         <FORM NAME="FMJ601" DESCRIPTION="远程主界面" LOCK="false" />
       </COMPANY>
     </APPNAME>

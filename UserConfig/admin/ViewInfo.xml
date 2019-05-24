@@ -1,7 +1,7 @@
 ﻿<XtraSerializer version="1.0" application="DockManager">
   <property name="#LayoutVersion" />
   <property name="AllowGlyphSkinning">false</property>
-  <property name="ActivePanelID">-1</property>
+  <property name="ActivePanelID">0</property>
   <property name="AutoHiddenPanelCaptionShowMode">ShowForAllPanels</property>
   <property name="TopZIndexControls" iskey="true" value="5">
     <property name="Item1">DevExpress.XtraBars.BarDockControl</property>

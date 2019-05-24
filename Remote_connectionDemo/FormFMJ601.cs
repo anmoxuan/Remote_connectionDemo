@@ -20,15 +20,15 @@ namespace FM
         private Dictionary<String, String> FinAllTree = new Dictionary<string, string>();
         public FormFMJ601()
         {
-            InitializeComponent();
-            Logger.Info("程序启动----"+DateTime.Now.ToString());
+             InitializeComponent();
+             AddNodes();
+             Logger.Info("程序启动----" + DateTime.Now.ToString());
         }
         //窗体启动显示参数
         private void Form1_Load(object sender, EventArgs e)
         {
             try
             {
-                AddNodes();
                 XmlDataDocument xmlData = new XmlDataDocument();
                 XmlReaderSettings settings = new XmlReaderSettings();
                 settings.IgnoreComments = true;//忽略文档里面的注释
@@ -88,16 +88,10 @@ namespace FM
                     TreeNode Addnoede = new TreeNode();
                     if (FinAllTree.ContainsKey(xe.GetAttribute("id"))|| FinAllTree.ContainsValue(xnl1.Item(6).InnerText))
                     {
-                            MessageBox.Show("配置文件具有相同的id或快捷键，请先修改！");
-                            Process[] processes = Process.GetProcesses();
-                            foreach (Process p in processes)
-                            {
-                                if (p.ProcessName == "EH")
-                                {
-                                    p.Kill();
-                                }
-                            }
-                            return;
+                        if (DialogResult.OK == MessageBox.Show("配置文件具有相同的id或快捷键，重复id："+ xe.GetAttribute("id"), "", MessageBoxButtons.OK))
+                        {
+                            //Application.Exit();
+                        }
                     }
                     else
                     {
@@ -446,41 +440,40 @@ namespace FM
             }
         }
         private void FormL2RM_FormClosing(object sender, FormClosingEventArgs e)
-        {       
+        {
+                    //if (DialogResult.OK == MessageBox.Show("是否删除", "Warning",MessageBoxButtons.OKCancel, MessageBoxIcon.Warning))
+                    //{
 
-            //if (DialogResult.OK == MessageBox.Show("是否删除", "Warning",MessageBoxButtons.OKCancel, MessageBoxIcon.Warning))
-            //{
+                    //    try
+                    //    {
+                    //        Process[] processes = Process.GetProcesses();
+                    //        foreach (Process p in processes)
+                    //        {
+                    //            if (p.ProcessName == "RMS_RDPClient")
+                    //            {
+                    //                p.Kill();
+                    //            }
+                    //        }
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //    }
+                    //    //关闭本窗体
 
-            //    try
-            //    {
-            //        Process[] processes = Process.GetProcesses();
-            //        foreach (Process p in processes)
-            //        {
-            //            if (p.ProcessName == "RMS_RDPClient")
-            //            {
-            //                p.Kill();
-            //            }
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
-            //    }
-            //    //关闭本窗体
+                    //    this.Dispose();
 
-            //    this.Dispose();
+                    //    //退出程序
 
-            //    //退出程序
+                    //    Application.Exit();
+                    //}
+                    //else
+                    //{
 
-            //    Application.Exit();
-            //}
-            //else
-            //{
-
-            //}
-
+                    //}
 
 
-        }
+
+                }
         //控件居中
         private void FormL2RM_Resize(object sender, EventArgs e)
         {

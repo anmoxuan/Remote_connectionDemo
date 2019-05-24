@@ -28,13 +28,4 @@
     <Status>0</Status>
     <key>F3</key>
   </Server>
-<Server id="4">
-    <Name>administrator</Name>
-    <Host>10.25.25.208</Host>
-    <Password>zwq123</Password>
-    <Prot>12005</Prot>
-    <Desc>server4</Desc>
-    <Status>0</Status>
-    <key>F4</key>
-  </Server>
 </Servers>
