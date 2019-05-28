@@ -49,6 +49,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ServerNames = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -98,7 +99,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(318, 344);
+            this.button2.Location = new System.Drawing.Point(333, 381);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 62);
@@ -195,7 +196,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FM.Properties.Resources.Remote;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(409, 81);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 85);
@@ -205,7 +206,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(272, 438);
+            this.groupBox1.Location = new System.Drawing.Point(272, 463);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(322, 100);
             this.groupBox1.TabIndex = 8;
@@ -241,17 +242,28 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(336, 225);
+            this.panel1.Location = new System.Drawing.Point(359, 258);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 9;
             // 
+            // ServerNames
+            // 
+            this.ServerNames.AutoSize = true;
+            this.ServerNames.BackColor = System.Drawing.Color.Transparent;
+            this.ServerNames.Location = new System.Drawing.Point(406, 199);
+            this.ServerNames.Name = "ServerNames";
+            this.ServerNames.Size = new System.Drawing.Size(89, 18);
+            this.ServerNames.TabIndex = 10;
+            this.ServerNames.Text = "ServerName";
+            // 
             // FormFMJ601
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::FM.Properties.Resources.Remote1;
             this.ClientSize = new System.Drawing.Size(741, 540);
+            this.Controls.Add(this.ServerNames);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -310,6 +322,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label ServerNames;
     }
 }
 

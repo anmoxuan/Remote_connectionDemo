@@ -10,15 +10,18 @@ using System.Windows.Forms;
 using System.Xml;
 using EF;
 using EI;
+using WindowsFormsControlLibrary2;
 
 namespace FM
 {
     public partial class FormFMJ603 : EFFormMain
     {
         private String server;
-
+        private WindowsFormsControlLibrary2.UserControl1 userControl;
         public string Server { get => server; set => server = value; }
-
+        private Dictionary<String, UserControl1> userControls = new Dictionary<string, UserControl1>();//userControl对象
+        private Dictionary<String,String> ListKey = new Dictionary<string,String>();
+   
         public FormFMJ603()
         {
             InitializeComponent();
@@ -27,43 +30,20 @@ namespace FM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+           
+            ListKey.Clear();
+            foreach (var ietm in userControls)
             {
-                int ii = fallone(comboBox1.SelectedItem.ToString());
-                if (ii == 0)
+                if (ListKey.ContainsValue(ietm.Value.ComText))
                 {
-                    XmlDataDocument xmlData = new XmlDataDocument();
-                    XmlReaderSettings settings = new XmlReaderSettings();
-                    settings.IgnoreComments = true;//忽略文档里面的注释
-                    xmlData.Load(@"FM/Server.xml");
-                    XmlNode xn = xmlData.SelectSingleNode("Servers");
-                    XmlNodeList xnl = xn.ChildNodes;
-                    foreach (XmlNode xnls in xnl)
-                    {
-                        XmlElement xe = (XmlElement)xnls;
-                        XmlNodeList xnl1 = xe.ChildNodes;
-                        if (this.textBox1.Text == xnl1.Item(4).InnerText)
-                        {
-                            xnl1.Item(6).InnerText = comboBox1.SelectedItem.ToString();
-                            xmlData.Save(@"FM/Server.xml");
-                            MessageBox.Show(this.textBox1.Text + "已修改为：" + this.comboBox1.SelectedItem.ToString());
-                            this.Close();
-                            Logger.Info("修改快捷键启动成功----"+DateTime.Now.ToString());
-                        }
-                    }
+                    MessageBox.Show(ietm.Value.ComText+"已存在！");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("此键已被使用！");
+                    ListKey.Add(ietm.Value.LabelText, ietm.Value.ComText);
                 }
             }
-            catch (Exception ex)
-            {
-                Logger.Error(ex.Message);
-            } 
-        }
-        public int fallone(String key)
-        {
             try
             {
                 XmlDataDocument xmlData = new XmlDataDocument();
@@ -76,55 +56,82 @@ namespace FM
                 {
                     XmlElement xe = (XmlElement)xnls;
                     XmlNodeList xnl1 = xe.ChildNodes;
-                    if (key.Equals(xnl1.Item(6).InnerText))
+                    foreach (var item in ListKey)
                     {
-                        return 1;
+                        if (item.Key == xnl1.Item(4).InnerText)
+                        {
+                            xnl1.Item(6).InnerText = item.Value.ToString();
+                            xmlData.Save(@"FM/Server.xml");
+                            
+                            Logger.Info("修改快捷键启动成功----" + DateTime.Now.ToString());
+                        }
+                    }
+
+                }
+                MessageBox.Show("修改成功！");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.Message);
+            } 
+        }
+        //窗体加载
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            int X = 90;
+            int Y = 61;
+            try
+            {
+                XmlDataDocument xmlData = new XmlDataDocument();
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.IgnoreComments = true;//忽略文档里面的注释
+                xmlData.Load(@"FM/Server.xml");
+                XmlNode xn = xmlData.SelectSingleNode("Servers");
+                XmlNodeList xnl = xn.ChildNodes;
+                foreach (XmlNode xnls in xnl)
+                {
+                    AdduUserControl(X, Y);
+                    X = X + 200;
+                    XmlElement xe = (XmlElement)xnls;
+                    XmlNodeList xnl1 = xe.ChildNodes;
+                    TreeNode Addnoede = new TreeNode();
+                    userControl.LabelText = xnl1.Item(4).InnerText;
+                    if (xnl1.Item(4).InnerText==userControl.LabelText)
+                    {
+                        userControl.SelectedItem(xnl1.Item(6).InnerText);
                     }
                 }
             }
             catch (Exception ex)
             {
-                Logger.Info(ex.Message);
-            }
-            return 0;
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                comboBox1.SelectedIndex = 0;
-                this.textBox1.Text = server;
-            }
-            catch (Exception ex)
-            {
                 Logger.Error(ex.Message);
             }
+            
         }
-
-        private void FormL2RMF_EF_START_FORM_BY_EF(object sender, EF_Args i_args)
+        //创建自定义控件并设置属性
+        int index = 1;
+        public void AdduUserControl(int X,int Y)
         {
-            try
+            userControl = new WindowsFormsControlLibrary2.UserControl1
             {
-                String[] name = i_args.callParams;
-                this.Server = name[0];
-                Logger.Info("获取需要的数据----"+DateTime.Now.ToString());
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex.Message);
-            }
+                Width = 175,
+                Height = 230
+            };
+            userControl.Name = "userControl"+index;
+            panel1.Controls.Add(userControl);
+            userControl.Location = new Point(X,Y);
+            //把UserControl1对象添加到集合中
+            userControls.Add(userControl.Name,userControl);
+            index++;
         }
-
+        //让控件居中
         private void FMCCJ603_Resize(object sender, EventArgs e)
         {
             try
             {
                 button1.Left = (this.Width - button1.Width) / 2;
-                textBox1.Left = (this.Width - textBox1.Width) / 2;
-                label1.Left = (this.Width - label1.Width) / 2;
-                label2.Left = (this.Width - label2.Width) / 2;
-                comboBox1.Left = (this.Width - comboBox1.Width) /2;
+                panel1.Left = (this.Width - panel1.Width) / 2;
             }
             catch (Exception ex)
             {

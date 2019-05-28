@@ -46,7 +46,7 @@ namespace FM
                             if (xe.GetAttribute("id") == "1")
                             {
                                 this.label4.Text = xnl1.Item(0).InnerText;
-                                this.label5.Text = xnl1.Item(4).InnerText;
+                                this.ServerNames.Text = xnl1.Item(4).InnerText;
                                 this.label8.Text = xnl1.Item(1).InnerText;
                                 this.label9.Text = xnl1.Item(2).InnerText;
                                 this.label7.Text = xe.GetAttribute("id");
@@ -128,7 +128,7 @@ namespace FM
                     if (e.Node.Tag.ToString()==xe.GetAttribute("id"))
                     {
                         this.label4.Text = xnl1.Item(0).InnerText;
-                        this.label5.Text = xnl1.Item(4).InnerText;
+                        this.ServerNames.Text = xnl1.Item(4).InnerText;
                         this.label8.Text = xnl1.Item(1).InnerText;
                         this.label9.Text = xnl1.Item(2).InnerText;
                         this.label7.Text = xe.GetAttribute("id");
@@ -233,7 +233,7 @@ namespace FM
                                     {
                                         this.label6.Text = "已连接";
                                         this.button2.BackColor = Color.Silver;
-                                        (forms as FormFMJ602).button4_Click(this.label8.Text, this.label4.Text, this.label9.Text, this.label5.Text);
+                                        (forms as FormFMJ602).button4_Click(this.label8.Text, this.label4.Text, this.label9.Text, this.ServerNames.Text);
                                         (forms as FormFMJ602).Activate();
                                         Logger.Info("连接服务----" + DateTime.Now.ToString());
                                         break;
@@ -249,7 +249,7 @@ namespace FM
                         }
                         else
                         {
-                            this.EFCallForm("FMJ602", new object[] { this.label8.Text, this.label4.Text, this.label9.Text, this.label5.Text });
+                            this.EFCallForm("FMJ602", new object[] { this.label8.Text, this.label4.Text, this.label9.Text, this.ServerNames.Text });
                             foreach (Form form in EF.EF_Args.ShellForm.MdiChildren)
                             {
                                 if (form.Name == "FormFMJ602")
@@ -325,7 +325,7 @@ namespace FM
                     }
                     else
                     {
-                        this.EFCallForm("FMJ603", new object[] { this.label5.Text });
+                        this.EFCallForm("FMJ603", new object[] { this.ServerNames.Text });
                         Logger.Info("修改启动快捷键"+DateTime.Now.ToString());
                         return;
                     }
@@ -359,11 +359,11 @@ namespace FM
                             {
                                 if (forms.Name == "FormFMJ602")
                                 {
-                                    if ((forms as FormFMJ602).ServerConnet(this.label8.Text) == 0)
+                                    if ((forms as FormFMJ602).ServerConnet(server) == 0)
                                     {
                                         this.label6.Text = "已连接";
                                         this.button2.BackColor = Color.Silver;
-                                        (forms as FormFMJ602).button4_Click(this.label8.Text, this.label4.Text, this.label9.Text, this.label5.Text);
+                                        (forms as FormFMJ602).button4_Click(server, userName, passWord, serverName);
                                         (forms as FormFMJ602).Activate();
                                         Logger.Info("快捷键连接服务----"+DateTime.Now.ToString());
                                     }
@@ -383,7 +383,7 @@ namespace FM
                             {
                                 if (form.Name == "FormFMJ602")
                                 {
-                                    if ((form as FormFMJ602).ServerConnet(this.label8.Text) == 1)
+                                    if ((form as FormFMJ602).ServerConnet(server) == 1)
                                     {
                                         this.label6.Text = "已连接";
                                         this.button2.BackColor = Color.Silver;
@@ -483,6 +483,7 @@ namespace FM
                 groupBox1.Left = (this.Width - groupBox1.Width) / 2;
                 panel1.Left = (this.Width - panel1.Width) / 2;
                 pictureBox1.Left = (this.Width - pictureBox1.Width) / 2;
+                ServerNames.Left = (this.Width-ServerNames.Width)/2;
             }
             catch (Exception ex)
             {
